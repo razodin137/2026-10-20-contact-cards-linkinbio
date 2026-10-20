@@ -1,0 +1,6 @@
+# Per-user artifacts: your input and the generated page.
+contact.yaml
+index.html
+
+__pycache__/
+.venv/

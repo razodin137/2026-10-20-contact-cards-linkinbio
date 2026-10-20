@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#edeee7"/>
+  <g fill="none" stroke="#dcded5" stroke-width="3">
+    <circle cx="800" cy="400" r="190"/>
+    <circle cx="800" cy="400" r="140"/>
+    <circle cx="800" cy="400" r="95"/>
+  </g>
+  <g stroke="#161713" stroke-width="18" stroke-linecap="butt" fill="none">
+    <path d="M800 280v240"/>
+    <path d="M696 340l208 120"/>
+    <path d="M696 460l208-120"/>
+  </g>
+  <text x="800" y="800" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" letter-spacing="10" fill="#6d7068">EXAMPLE CARD IMAGE</text>
+</svg>

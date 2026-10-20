@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  {{META}}
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root { color-scheme: light; --paper: #f8f8f4; --ink: #161713; --muted: #6d7068; --surface: #edeee7; --line: #dcded5; }
+    html { -webkit-font-smoothing: antialiased; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid #516244; outline-offset: 4px; }
+    .page { max-width: 680px; margin: 0 auto; padding: 72px 24px 32px; }
+    .intro { text-align: center; }
+    h1 { margin: 0; font-size: clamp(34px, 5.4vw, 54px); line-height: 1.16; font-weight: 600; letter-spacing: -0.055em; }
+    .headline { margin: 16px auto 0; max-width: 32em; color: var(--muted); font-size: 21px; line-height: 1.5; letter-spacing: -0.02em; text-wrap: pretty; }
+    .socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 30px auto 0; }
+    .social-link { display: inline-flex; align-items: center; gap: 7px; padding: 11px 13px; background: var(--surface); border-radius: 999px; text-decoration: none; font-size: 15px; line-height: 1.2; }
+    .social-link:hover { background: #e0e3d8; transform: translateY(-2px); }
+    .social-link svg { width: 19px; height: 19px; flex-shrink: 0; }
+    .placeholder { color: var(--muted); }
+    .social-link.placeholder { background: transparent; border: 1px dashed var(--line); }
+    .about { max-width: 480px; margin: 48px auto 0; text-align: center; color: var(--muted); font-size: 21px; line-height: 1.55; letter-spacing: -0.025em; text-wrap: pretty; }
+    section { margin: 48px auto 0; text-align: center; }
+    h2 { margin: 0 0 14px; font: 400 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+    .projects, .contact { list-style: none; margin: 0 auto; padding: 0; max-width: 480px; font-size: 17px; line-height: 1.8; }
+    .project-link { font-weight: 500; text-decoration: underline; text-decoration-color: #c8ccbf; text-underline-offset: 4px; }
+    .project-link:hover { text-decoration-color: var(--ink); }
+    .project-name { font-weight: 500; }
+    .project-note { color: var(--muted); }
+    .contact-k { display: inline-block; min-width: 6em; margin-right: 12px; font: 400 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+    .contact-v { font-weight: 500; }
+    .newsletter { max-width: 480px; margin: 52px auto 0; border-radius: 23px; background: var(--surface); overflow: hidden; }
+    .journal { position: relative; margin: 0; aspect-ratio: 16 / 9; }
+    .journal img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .journal::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.6)); pointer-events: none; }
+    .journal figcaption { position: absolute; z-index: 1; left: 17px; bottom: 15px; color: #fff; font-size: 12px; }
+    .signup { padding: 24px 23px 22px; }
+    .signup-invitation { margin: 0 0 20px; color: var(--muted); font-size: 17px; line-height: 1.6; letter-spacing: -.015em; }
+    .signup-row { display: flex; gap: 8px; }
+    .signup-row input { flex: 1; min-width: 0; padding: 12px 16px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); font: inherit; font-size: 15px; }
+    .signup-row input:focus-visible { outline: 2px solid #516244; outline-offset: 2px; }
+    .signup-row button { flex-shrink: 0; padding: 12px 20px; border: 0; border-radius: 999px; background: var(--ink); color: var(--paper); font: inherit; font-size: 15px; cursor: pointer; }
+    .signup-row button:hover { background: #34352e; }
+    .signup-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .signup-note a { text-underline-offset: 3px; }
+    .foot { margin: 56px 0 0; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    @media (max-width: 540px) {
+      .page { padding: 44px 20px 26px; }
+      .headline, .about { font-size: 19px; }
+      .social-link { font-size: 14px; padding: 10px 14px; }
+      .contact-k { display: block; min-width: 0; margin: 4px 0 0; }
+      .newsletter { margin-top: 40px; border-radius: 19px; }
+      .signup { padding: 22px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <h1>{{NAME}}</h1>
+      {{HEADLINE}}
+      {{SOCIALS}}
+    </header>
+    {{ABOUT}}
+    {{PROJECTS}}
+    {{CONTACT}}
+      {{NEWSLETTER}}
+    <footer class="foot">&copy; {{YEAR}} {{NAME}}</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[project]
+name = "contact-card"
+version = "0.1.0"
+description = "One-page contact card template rendered from contact.yaml, with placeholder fallbacks."
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6"]

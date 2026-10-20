@@ -1,0 +1,74 @@
+# ---------------------------------------------------------------------------
+# Contact page input. Copy this file to `contact.yaml` (gitignored), fill in
+# what you want, then build:
+#
+#     uv run build.py        # or: pip install pyyaml && python3 build.py
+#
+# Every field is optional:
+#   - No contact.yaml at all  -> the build emits placeholder content.
+#   - Fields you leave blank  -> simply omitted from the page.
+#   - Empty lists (`[]`)      -> that section is omitted.
+# ---------------------------------------------------------------------------
+
+# -- Page identity ----------------------------------------------------------
+name: Your Name
+
+# <title> / og:title; defaults to `name`
+title: Your Name
+
+# <meta name=description> / og:description; defaults to `headline`
+description: One line about what you do and where to find you.
+
+# canonical + og:url; omit if the page has no home yet
+url: https://you.example.com
+
+# One line under the name
+headline: Your one-line headline goes here.
+
+# A short paragraph
+about: >
+  A sentence or two about who you are, what you do, and how to reach you.
+
+# -- How to reach you -------------------------------------------------------
+email: you@example.com
+phone: +1 (555) 010-0100
+location: Your City
+
+# -- Social / profile links --------------------------------------------------
+# `platform` is optional: youtube, x, instagram and tiktok get their own
+# icons, anything else gets a generic globe. `url` is required; `label`
+# is optional (falls back to the platform name).
+socials:
+  - platform: github
+    label: "@you"
+    url: https://github.com/you
+  - platform: x
+    label: "@you"
+    url: https://x.com/you
+  - platform: youtube
+    label: Your Channel
+    url: https://youtube.com/@you
+
+# -- Email signup -------------------------------------------------------------
+# The card shows the bundled example image (assets/card.svg) unless you set
+# `image` to your own image link. The form POSTs one field — named by
+# `email_field`, default `email` — to `action`; any endpoint that accepts
+# that works (Buttondown, Listmonk, your own /subscribe route, …).
+# Leave `action` out and the form stays inert.
+newsletter:
+  title: Newsletter
+  invitation: Occasional notes on what you're building, straight to your inbox.
+  image: assets/card.svg    # your image link: an https:// URL or a site-relative path
+  caption: Replace this caption or delete the line.
+  action: https://you.example.com/subscribe
+  button: Subscribe
+  note: No spam. Unsubscribe whenever.
+
+# -- Things you're building ---------------------------------------------------
+# `name` is required; `url` and `note` are optional.
+projects:
+  - name: Your Project
+    url: https://you.example.com/your-project
+    note: what you're building
+  - name: Another Project
+    note: delete this entry or fill it in
